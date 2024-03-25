@@ -3,7 +3,7 @@ import Colors from '../constants/Colors';
 import products from '../../../assets/data/products';
 import React from 'react';
 
-const product = products[0];
+const product = products[1];
 
 export const defaultImage =
     'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png';
@@ -22,7 +22,11 @@ export default function MenuScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: {},
+    container: {
+        backgroundColor: 'white',
+        padding: 10,
+        borderRadius: 10
+    },
     image: {
         width: '100%',
         aspectRatio: 1,
