@@ -13,7 +13,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
         <Link href={`menu/${product.id}`} asChild>
             <Pressable style={styles.container}>
                 <Image
-                    source={{ uri: product.image || defaultImage }}
+                    source={{ uri: product.image || defaultPizzaImage }}
                     style={styles.image}
                     resizeMode="contain"
                 />
@@ -26,7 +26,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
 
 export default ProductListItem;
 
-export const defaultImage =
+export const defaultPizzaImage =
     'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png';
 
 const styles = StyleSheet.create({
