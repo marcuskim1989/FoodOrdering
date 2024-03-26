@@ -5,6 +5,8 @@ import { Stack } from 'expo-router';
 import products from '../../../../assets/data/products';
 import {defaultPizzaImage} from '../../components/ProductListItem'
 
+const sizes = ['S', 'M', 'L', 'XL']
+
 const ProductDetailsScreen = () => {
     const { id } = useLocalSearchParams();
 
@@ -22,6 +24,13 @@ const ProductDetailsScreen = () => {
                 source={{uri: product.image || defaultPizzaImage}} 
                 style={styles.image} 
             />
+
+            <Text>Select size</Text>
+            <View style={styles.sizes}>
+                {sizes.map((size) => (
+                    <Text key={size}>{size}</Text>
+                ))}
+            </View>
 
             <Text style={styles.price}>${product.price}</Text>
         </View>
