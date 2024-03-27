@@ -17,7 +17,7 @@ const ProductDetailsScreen = () => {
     const product = products.find((p) => p.id.toString() === id);
 
     const addToCart = () => {
-        console.warn('Added to Cart');
+        console.warn('Added to Cart', selectedSize);
     }
 
     if (!product) {
@@ -77,7 +77,8 @@ const styles = StyleSheet.create({
     },
     price:{
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginTop: 'auto'
     },
 
     sizes: {
