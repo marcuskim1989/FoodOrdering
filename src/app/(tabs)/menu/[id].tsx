@@ -77,6 +77,8 @@ const ProductDetailsScreen = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
+        padding: 10,
+        height: '100%'
     },
     image: {
         width: '100%',
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
     price: {
         fontSize: 18,
         fontWeight: 'bold',
-        marginTop: '20%'
+        marginTop: 'auto'
     },
 
     sizes: {
