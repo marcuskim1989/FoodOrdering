@@ -19,16 +19,20 @@ const CartProvider = ({children}: PropsWithChildren) => {
 
     const addItem = (product: Product, size: CartItem['size']) => {
 
+        // if already in cart, increment quantity
+
         const newCartItem: CartItem = {
-            id: '1',
+            id: '1', // generate
             product,
             product_id: product.id,
             size,
             quantity: 1
-        }
+        };
 
         setItems([newCartItem, ...items])
-    }
+    };
+
+    //updateQuantity
 
     console.log(items);
 
