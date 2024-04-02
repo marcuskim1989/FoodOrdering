@@ -1,10 +1,17 @@
 import {View, Text, Platform} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { CartItem, Product } from './types';
 
-const CartScreen = () => {
+import { useCart } from './providers/CartProvider';
+
+
+const CartScreen = () => { 
+    const {items} = useCart();
+
+
     return(
         <View>
-            <Text>cart</Text>
+            <Text>Cart items length: {items.length}</Text>
 
             <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
         </View>
